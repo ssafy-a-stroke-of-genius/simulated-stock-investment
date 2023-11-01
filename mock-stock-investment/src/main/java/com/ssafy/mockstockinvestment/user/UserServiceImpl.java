@@ -1,6 +1,5 @@
-package com.ssafy.mockstockinvestment.service;
+package com.ssafy.mockstockinvestment.user;
 
-import com.ssafy.mockstockinvestment.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

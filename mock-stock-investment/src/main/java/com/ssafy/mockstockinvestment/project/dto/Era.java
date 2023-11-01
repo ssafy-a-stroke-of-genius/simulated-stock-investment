@@ -1,12 +1,11 @@
-package com.ssafy.mockstockinvestment.domain;
+package com.ssafy.mockstockinvestment.project.dto;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "eras") //DB 테이블
+@Entity(name = "eras") //DB 테이블
 @Data //getter, setter, 기본 생성자, toString() 메서드
 public class Era {
     @Id //식별자
