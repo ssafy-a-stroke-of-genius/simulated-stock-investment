@@ -1,6 +1,6 @@
 package com.ssafy.mockstockinvestment.news;
 
-import com.ssafy.mockstockinvestment.project.dto.Project;
+import com.ssafy.mockstockinvestment.project.Project;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;

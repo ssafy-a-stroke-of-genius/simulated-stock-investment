@@ -1,10 +1,9 @@
-package com.ssafy.mockstockinvestment.user.dto;
+package com.ssafy.mockstockinvestment.user;
 
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DiscriminatorOptions;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.ssafy.mockstockinvestment.project.dto;
+package com.ssafy.mockstockinvestment.project;
 
 import com.sun.istack.NotNull;
 import lombok.Data;

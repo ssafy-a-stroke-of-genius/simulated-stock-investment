@@ -1,4 +1,4 @@
-package com.ssafy.mockstockinvestment.stock.dto;
+package com.ssafy.mockstockinvestment.stock;
 
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;

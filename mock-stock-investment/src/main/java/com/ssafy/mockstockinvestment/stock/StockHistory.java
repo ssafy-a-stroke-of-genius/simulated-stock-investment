@@ -1,6 +1,6 @@
-package com.ssafy.mockstockinvestment.stock.dto;
+package com.ssafy.mockstockinvestment.stock;
 
-import com.ssafy.mockstockinvestment.user.dto.Student;
+import com.ssafy.mockstockinvestment.user.Student;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;

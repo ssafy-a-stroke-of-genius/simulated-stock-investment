@@ -1,5 +1,7 @@
 package com.ssafy.mockstockinvestment.stock.dto;
 
+import com.ssafy.mockstockinvestment.stock.Account;
+import com.ssafy.mockstockinvestment.stock.Stock;
 import lombok.Data;
 
 import javax.persistence.Transient;

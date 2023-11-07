@@ -1,6 +1,6 @@
-package com.ssafy.mockstockinvestment.stock.dto;
+package com.ssafy.mockstockinvestment.stock;
 
-import com.ssafy.mockstockinvestment.user.dto.Student;
+import com.ssafy.mockstockinvestment.user.Student;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -17,9 +17,16 @@ public class Account {
     @Column(name="account_id")
     private Long accountId;
 
-    @Column(name="balance",nullable = false) //잔액
-    @NotNull
+    @Column(name="balance") //금액
     private Integer balance;
+
+    @Column(name="total_quantity")//보유 수량
+    private Integer quantity;
+
+    @Column(name="type", nullable = false)//항목(종류)
+    @Enumerated(EnumType.STRING)
+    @NotNull
+    private AccountEnum assetType;
 
     @OneToOne
     @JoinColumn(name="user_id_fk", nullable = false) //사용자

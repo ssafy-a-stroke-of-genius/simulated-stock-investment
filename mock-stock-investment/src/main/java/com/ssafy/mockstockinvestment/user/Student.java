@@ -1,7 +1,7 @@
-package com.ssafy.mockstockinvestment.user.dto;
+package com.ssafy.mockstockinvestment.user;
 
-import com.ssafy.mockstockinvestment.project.dto.Project;
-import com.ssafy.mockstockinvestment.stock.dto.Stock;
+import com.ssafy.mockstockinvestment.project.Project;
+import com.ssafy.mockstockinvestment.stock.Stock;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
