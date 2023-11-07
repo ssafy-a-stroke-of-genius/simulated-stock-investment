@@ -1,14 +1,17 @@
-package com.ssafy.mockstockinvestment.domain;
+package com.ssafy.mockstockinvestment.stock;
 
+import com.ssafy.mockstockinvestment.user.Student;
 import com.sun.istack.NotNull;
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Entity
-@Table(name = "stock_histories") //DB 테이블
+@Entity(name = "stock_histories") //DB 테이블
 @Data //getter, setter, 기본 생성자, toString() 메서드
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class StockHistory {
     @Id //식별자
     @GeneratedValue(strategy = GenerationType.IDENTITY) //ID값 자동으로 올라가게 설정
@@ -32,12 +35,12 @@ public class StockHistory {
     private Integer era;
 
     @ManyToOne
-    @JoinColumn(name="user_id_fk") //행위자
+    @JoinColumn(name="user_id_fk",nullable = false) //행위자
     @NotNull
     private Student userIdFK;
 
     @ManyToOne
-    @JoinColumn(name="stock_id_fk") //주식 정보
+    @JoinColumn(name="stock_id_fk",nullable = false) //주식 정보
     @NotNull
-    private Stocks stockIdFK;
+    private Stock stockIdFK;
 }
