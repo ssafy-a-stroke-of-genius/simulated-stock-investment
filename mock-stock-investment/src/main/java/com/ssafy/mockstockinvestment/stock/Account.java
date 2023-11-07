@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity(name = "accounts") //DB 테이블
 @Data //getter, setter, 기본 생성자, toString() 메서드
@@ -23,10 +24,18 @@ public class Account {
     @Column(name="total_quantity")//보유 수량
     private Integer quantity;
 
-    @Column(name="type", nullable = false)//항목(종류)
+    @Column(name="asset_type", nullable = false)//항목(종류)
     @Enumerated(EnumType.STRING)
     @NotNull
     private AccountEnum assetType;
+
+    @Column(name="created_at") //일자
+    @NotNull
+    private Timestamp createdAt;
+
+    @Column(name="era") //시대정보
+    @NotNull
+    private Integer era;
 
     @OneToOne
     @JoinColumn(name="user_id_fk", nullable = false) //사용자
