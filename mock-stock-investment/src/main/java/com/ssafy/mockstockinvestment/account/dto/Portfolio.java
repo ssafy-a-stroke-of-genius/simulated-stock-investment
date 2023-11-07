@@ -1,6 +1,6 @@
-package com.ssafy.mockstockinvestment.stock.dto;
+package com.ssafy.mockstockinvestment.account.dto;
 
-import com.ssafy.mockstockinvestment.stock.Account;
+import com.ssafy.mockstockinvestment.account.Account;
 import com.ssafy.mockstockinvestment.stock.Stock;
 import lombok.Data;
 

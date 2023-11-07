@@ -1,4 +1,4 @@
-package com.ssafy.mockstockinvestment.stock;
+package com.ssafy.mockstockinvestment.account;
 
 import com.ssafy.mockstockinvestment.user.Student;
 import com.sun.istack.NotNull;
