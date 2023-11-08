@@ -2,16 +2,17 @@ package com.ssafy.mockstockinvestment.stock;
 
 import com.ssafy.mockstockinvestment.user.Student;
 import com.sun.istack.NotNull;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity(name = "stock_histories") //DB 테이블
-@Data //getter, setter, 기본 생성자, toString() 메서드
+//@Data
+// getter, setter, 기본 생성자, toString() 메서드
+@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class StockHistory {
     @Id //식별자
     @GeneratedValue(strategy = GenerationType.IDENTITY) //ID값 자동으로 올라가게 설정
@@ -20,7 +21,8 @@ public class StockHistory {
 
     @Column(name="act", length = 4) //action
     @NotNull
-    private String act;
+    @Enumerated(EnumType.STRING)
+    private StockDealActionEnum act;
 
     @Column(name="quantity") //수량
     @NotNull
@@ -44,3 +46,5 @@ public class StockHistory {
     @NotNull
     private Stock stockIdFK;
 }
+
+

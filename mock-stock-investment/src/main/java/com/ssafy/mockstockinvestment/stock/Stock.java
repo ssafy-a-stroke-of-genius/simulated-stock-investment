@@ -2,27 +2,20 @@ package com.ssafy.mockstockinvestment.stock;
 
 import com.ssafy.mockstockinvestment.project.Project;
 import com.sun.istack.NotNull;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity(name = "stocks") //DB 테이블
-@Data //getter, setter, 기본 생성자, toString() 메서드
+@Getter @Builder
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Stock {
     @Id //식별자
     @GeneratedValue(strategy = GenerationType.IDENTITY) //ID값 자동으로 올라가게 설정
     @Column(name="stock_id")
     private Long stockId;
-
-    @Column(name="stock_company", length = 10) //회사
-    @NotNull
-    private String stockCompany;
-
-    private String stockDetail;
 
     @Column(name="stock_price") //금액
     @NotNull

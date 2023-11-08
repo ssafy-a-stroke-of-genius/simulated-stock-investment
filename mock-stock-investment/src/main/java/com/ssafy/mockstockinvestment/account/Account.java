@@ -1,16 +1,16 @@
-package com.ssafy.mockstockinvestment.stock;
+package com.ssafy.mockstockinvestment.account;
 
 import com.ssafy.mockstockinvestment.user.Student;
 import com.sun.istack.NotNull;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity(name = "accounts") //DB 테이블
-@Data //getter, setter, 기본 생성자, toString() 메서드
+@Getter //getter, setter, 기본 생성자, toString() 메서드
+@Builder(toBuilder = true)
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Account {
     @Id //식별자
