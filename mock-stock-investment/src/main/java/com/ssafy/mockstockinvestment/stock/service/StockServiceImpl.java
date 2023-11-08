@@ -47,20 +47,21 @@ public class StockServiceImpl implements StockService{
     public List<Stock> getStockList(String startDate, String endDate, String company) throws ParseException {
         return stockRepository.getStockList(StringToTimestamp(startDate),StringToTimestamp(endDate),company);
     }
+
     @Transactional
     @Override
-    public void sellStock(StockDealRequest stockDealRequest) {
+    public void dealStock(StockDealRequest stockDealRequest) {
         //stock,student 조회
         Optional<Stock> stockToSell=stockRepository.findById(stockDealRequest.getStockId());
         Optional<Student> studentToSell=studentRepository.findById(stockDealRequest.getUserId());
 
         //해당하는 주식이 존재한다면 진행
         if(stockToSell.isPresent()&&studentToSell.isPresent()){
-            //주식 구매 내역 로그 생성
+            //주식 거래 내역 로그 생성
             StockHistory stockHistory=stockDealRequest.createStockHistory(stockToSell.get(),studentToSell.get());
             stockHistoryRepository.save(stockHistory);
 
-            //오늘 집계 계좌에 구매 정보 업데이트
+            //오늘 집계 계좌에 거래 정보 업데이트
             Account account=accountRepository.findAccount(
                     studentToSell.get(),
                     stockDealRequest.getDealDate(),
@@ -72,11 +73,7 @@ public class StockServiceImpl implements StockService{
             accountRepository.save(account);
         }
     }
-    @Transactional
-    @Override
-    public void buyStock(StockDealRequest stockDealRequest) {
 
-    }
     @Transactional
     public void createStock(Stock stock){
         stockRepository.save(stock);

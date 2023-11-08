@@ -21,11 +21,6 @@ public interface StockService {
      * 사용자 아이디, 판매 주식, 판매 수량을 가진 DTO를 통한 판매 요청
      * @param stockDealRequest
      */
-    void sellStock(StockDealRequest stockDealRequest);
-    /**
-     * 사용자 아이디, 구매 주식, 구매 수량을 가진 DTO를 통한 구매 요청
-     * @param stockDealRequest
-     */
-    void buyStock(StockDealRequest stockDealRequest);
+    void dealStock(StockDealRequest stockDealRequest);
     void createStock(Stock stock);
 }
