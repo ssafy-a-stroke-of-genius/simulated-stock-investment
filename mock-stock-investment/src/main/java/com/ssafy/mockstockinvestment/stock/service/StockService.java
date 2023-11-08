@@ -27,4 +27,5 @@ public interface StockService {
      * @param stockDealRequest
      */
     void buyStock(StockDealRequest stockDealRequest);
+    void createStock(Stock stock);
 }

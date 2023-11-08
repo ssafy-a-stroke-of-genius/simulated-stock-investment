@@ -77,6 +77,7 @@ public class StockServiceImpl implements StockService{
     public void buyStock(StockDealRequest stockDealRequest) {
 
     }
+    @Transactional
     public void createStock(Stock stock){
         stockRepository.save(stock);
     }
