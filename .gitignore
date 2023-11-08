@@ -4,6 +4,9 @@ build/
 !mock-stock-investment/gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+application-dev.yml
+application-prod.yml
+application.yml
 
 ### STS ###
 .apt_generated

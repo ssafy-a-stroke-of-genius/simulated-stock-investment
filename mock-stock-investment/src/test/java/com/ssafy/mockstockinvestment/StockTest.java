@@ -18,7 +18,6 @@ public class StockTest {
     @DisplayName("getStockList 동작확인")
     public void getStockListTest() throws Exception{
         //given
-        List<Stock> stockList=stockRepository.getStockList("2023-11-06","2023-11-06","A회사");
         //when
         
         //then

@@ -18,10 +18,6 @@ public class Stock {
     @Column(name="stock_id")
     private Long stockId;
 
-    @Column(name="stock_company", length = 10) //회사
-    @NotNull
-    private String stockCompany;
-
     private String stockDetail;
 
     @Column(name="stock_price") //금액
