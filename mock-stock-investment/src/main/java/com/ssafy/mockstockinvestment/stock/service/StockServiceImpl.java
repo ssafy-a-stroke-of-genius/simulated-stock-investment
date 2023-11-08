@@ -40,7 +40,6 @@ public class StockServiceImpl implements StockService{
         SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
         Date parsedDate=dateFormat.parse(date);
         return new Timestamp(parsedDate.getTime());
-
     }
 
     @Override

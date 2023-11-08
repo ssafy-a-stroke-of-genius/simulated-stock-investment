@@ -17,12 +17,12 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class StockDealRequest {
-    private String userId;
-    private Long stockId;
-    private Integer quantity;
-    private StockDealActionEnum action;
-    private String dealDate;
-    private AccountEnum assetType;
+    private String userId; //요청한 사용자 아이디
+    private Long stockId;//거래 요청한 주식
+    private Integer quantity;// 수량
+    private StockDealActionEnum action; // 주식 판매/구매 구분
+    private String dealDate; //주식 구매일
+    private AccountEnum assetType; //구매하는 자산 항목(적금, 주식, 가용 자산 등)
 
     /**
      * 거래한 주식과 거래한 학생을 받아 log를 남기기 위한 메서드
