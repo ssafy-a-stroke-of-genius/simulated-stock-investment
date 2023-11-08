@@ -7,4 +7,6 @@ import java.util.List;
 public interface EducationService {
     List<Education> getEducationList();
     void registEducation(EducationRegistForm educationRegistForm);
+    Education getEducation(Long id);
+    void deleteEducation(Long id);
 }
