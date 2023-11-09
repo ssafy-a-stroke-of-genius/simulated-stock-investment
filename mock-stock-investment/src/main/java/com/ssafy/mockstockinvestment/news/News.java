@@ -1,8 +1,10 @@
 package com.ssafy.mockstockinvestment.news;
 
+import com.ssafy.mockstockinvestment.news.dto.NewsDto;
 import com.ssafy.mockstockinvestment.project.Project;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -43,4 +45,26 @@ public class News {
     @JoinColumn(name="project_id_fk") //프로젝트
     @NotNull
     private Project projectIdFK;
+
+    @Builder
+    public News(Long newsId,String newsTitle,String newsContent,Timestamp newsCreatedDate,Double newsStockRate,String newsStockCompany,Project projectIdFK){
+        this.newsId=newsId;
+        this.newsTitle=newsTitle;
+        this.newsContent=newsContent;
+        this.newsCreatedDate=newsCreatedDate;
+        this.newsStockRate=newsStockRate;
+        this.newsStockCompany=newsStockCompany;
+        this.projectIdFK=projectIdFK;
+    }
+    public NewsDto toNewsDto(){
+        return NewsDto.builder()
+                .newsId(newsId)
+                .newsTitle(newsTitle)
+                .newsContent(newsContent)
+                .newsCreatedDate(newsCreatedDate)
+                .newsStockRate(newsStockRate)
+                .newsStockCompany(newsStockCompany)
+                .projectIdFK(projectIdFK)
+                .build();
+    }
 }
