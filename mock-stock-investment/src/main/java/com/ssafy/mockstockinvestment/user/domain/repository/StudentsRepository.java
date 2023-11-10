@@ -1,4 +1,4 @@
 package com.ssafy.mockstockinvestment.user.domain.repository;
 
-public interface StudentRepository {
+public interface StudentsRepository {
 }
