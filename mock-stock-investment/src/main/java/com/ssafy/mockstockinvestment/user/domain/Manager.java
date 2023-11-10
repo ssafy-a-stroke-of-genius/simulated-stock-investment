@@ -1,4 +1,4 @@
-package com.ssafy.mockstockinvestment.user;
+package com.ssafy.mockstockinvestment.user.domain;
 
 import com.ssafy.mockstockinvestment.project.Project;
 

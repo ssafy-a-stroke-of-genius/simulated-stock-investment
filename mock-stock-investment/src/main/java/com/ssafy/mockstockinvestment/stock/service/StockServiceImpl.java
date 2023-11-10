@@ -7,7 +7,7 @@ import com.ssafy.mockstockinvestment.stock.StockHistory;
 import com.ssafy.mockstockinvestment.stock.dto.StockDealRequest;
 import com.ssafy.mockstockinvestment.stock.repository.StockHistoryRepository;
 import com.ssafy.mockstockinvestment.stock.repository.StockRepository;
-import com.ssafy.mockstockinvestment.user.Student;
+import com.ssafy.mockstockinvestment.user.domain.Student;
 import com.ssafy.mockstockinvestment.user.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

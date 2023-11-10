@@ -1,4 +1,4 @@
-package com.ssafy.mockstockinvestment.user;
+package com.ssafy.mockstockinvestment.user.domain;
 
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;

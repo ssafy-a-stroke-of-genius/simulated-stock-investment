@@ -1,7 +1,7 @@
 package com.ssafy.mockstockinvestment.project;
 
-import com.ssafy.mockstockinvestment.user.Manager;
-import com.ssafy.mockstockinvestment.user.Student;
+import com.ssafy.mockstockinvestment.user.domain.Manager;
+import com.ssafy.mockstockinvestment.user.domain.Student;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
