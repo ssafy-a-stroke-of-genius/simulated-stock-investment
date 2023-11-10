@@ -18,3 +18,8 @@ spring:
 logging.level:
   org.hibernate.SQL: debug
   org.hibernate.type: trace
+
+  jwt:
+    key: 비밀키
+    accessTokenExpirationTime: 초 단위는 밀리세컨드로 작성
+    refreshTokenExpirationTime: 123123
