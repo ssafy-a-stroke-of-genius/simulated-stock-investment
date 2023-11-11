@@ -4,7 +4,7 @@ import com.ssafy.mockstockinvestment.account.AccountEnum;
 import com.ssafy.mockstockinvestment.stock.Stock;
 import com.ssafy.mockstockinvestment.stock.StockDealActionEnum;
 import com.ssafy.mockstockinvestment.stock.StockHistory;
-import com.ssafy.mockstockinvestment.user.Student;
+import com.ssafy.mockstockinvestment.user.domain.Student;
 import lombok.*;
 
 

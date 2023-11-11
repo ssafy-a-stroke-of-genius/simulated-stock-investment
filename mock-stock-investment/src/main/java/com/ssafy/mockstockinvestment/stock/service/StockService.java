@@ -2,7 +2,6 @@ package com.ssafy.mockstockinvestment.stock.service;
 
 import com.ssafy.mockstockinvestment.stock.Stock;
 import com.ssafy.mockstockinvestment.stock.dto.StockDealRequest;
-import com.ssafy.mockstockinvestment.user.Student;
 
 import java.text.ParseException;
 import java.util.List;

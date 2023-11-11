@@ -1,6 +1,6 @@
 package com.ssafy.mockstockinvestment.stock;
 
-import com.ssafy.mockstockinvestment.user.Student;
+import com.ssafy.mockstockinvestment.user.domain.Student;
 import com.sun.istack.NotNull;
 import lombok.*;
 
